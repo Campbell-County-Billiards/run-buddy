@@ -40,8 +40,12 @@ ul.no-bullets {
   margin: 0; /* Remove margins */
 }
 
-ul li {
-  border-bottom: 1px solid var(--tertiary-color);
+li h3 {
+  color: var(--primary-color) !important;
+}
+
+.seperator {
+  border-bottom: 2px solid var(--primary-color);
 }
 
 header h1 {
@@ -133,7 +137,7 @@ section {
 
 .hero-cta {
   width: 35%;
-  text-align: right;
+  text-align: center;
   margin: 3.5%;
   color: #fff;
   font-size: 18px;
@@ -334,6 +338,16 @@ section {
   flex: 1 30%;
 }
 
+.step h4 {
+  color: var(--primary-color);
+  font-size: 46px;
+  flex: 1 30%;
+}
+
+.step ul li {
+  border-bottom: 1px solid var(--tertiary-color);
+}
+
 .step-info {
   flex: 2 70%;
   display: flex;
@@ -358,7 +372,7 @@ section {
   flex: 12;
 }
 
-.step-text h4 {
+.step-text h5 {
   font-size: 26px;
   line-height: 1.5;
   color: var(--secondary-color);
