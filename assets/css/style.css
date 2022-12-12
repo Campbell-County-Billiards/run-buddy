@@ -8,7 +8,7 @@
   --primary-color: #fce138;
   --secondary-color: #024e76;
   --tertiary-color: #39a6b2;
-  --primary-color-transparent: rgba(252,225,56, 0.8);
+  --primary-color-transparent: rgba(252, 225, 56, 0.8);
   --secondary-color-transparent: rgba(2, 78, 118, 0.8);
 }
 
@@ -19,19 +19,29 @@ body {
 
 header {
   padding: 20px 35px;
-  background-image: url('../images/hero-bg.jpg');
+  background-image: url("../images/hero-bg.jpg");
   background-position: 80%;
-  background-attachment:fixed;
+  background-attachment: fixed;
   background-size: cover;
   /* 2.2 - added flex and removed inline / float properties from h1 and nav */
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  position:sticky;
+  position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 9999;
+}
+
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+ul li {
+  border-bottom: 1px solid var(--tertiary-color);
 }
 
 header h1 {
@@ -66,14 +76,14 @@ header nav ul li a {
   padding: 10px 15px;
   font-weight: 200;
   font-size: 1.55vw;
-  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header nav ul li a:hover {
   background: var(--primary-color);
   color: var(--secondary-color);
   border-radius: 15px;
-  text-shadow:none;
+  text-shadow: none;
 }
 
 /* FOOTER STYLES START */
@@ -111,10 +121,10 @@ section {
 
 /* 2.2 - REMOVED POSITIONING AND ADDED FLEX, MARGINS, AND FONT STYLING FOR CTA */
 .hero {
-  background-image: url('../images/hero-bg.jpg');
+  background-image: url("../images/hero-bg.jpg");
   background-position: 80%;
   background-attachment: fixed;
-  background-size:cover;
+  background-size: cover;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -135,7 +145,7 @@ section {
   font-size: 55px;
   color: var(--primary-color);
   line-height: 1.2;
-  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-form {
@@ -146,7 +156,7 @@ section {
   margin: 3.5%;
   color: var(--secondary-color);
   border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-form h3 {
@@ -165,16 +175,16 @@ section {
   font-size: 16px;
   color: var(--secondary-color);
   width: 100%;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
   border-radius: 10px;
 }
 
 .form-input {
-  background-color: rgba(255,255,255, 0.75);
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .form-input:focus {
-  background-color: rgba(255,255,255, 1);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .hero-form label {
@@ -191,45 +201,46 @@ section {
 }
 
 .hero-form button:hover {
-  background-color: var(--tertiary-color);  
+  background-color: var(--tertiary-color);
 }
 
-.checkbox-wrapper input[type="checkbox"], 
+.checkbox-wrapper input[type="checkbox"],
 .radio-wrapper input[type="radio"] {
   opacity: 0;
 }
 
 .checkbox-wrapper label::before,
 .radio-wrapper label::before {
-    content: "";
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    border: 1px solid var(--secondary-color);  
-    position: absolute;
-    top: -4px;
-    left: -30px;
-    background: rgba(255,255,255,0.75);  
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 1px solid var(--secondary-color);
+  position: absolute;
+  top: -4px;
+  left: -30px;
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .checkbox-wrapper label::after {
-    content: "";
-    display: inline-block;    
-    height: 6px;
-    width: 14px;
-    border-left: 2px solid var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
-    transform: rotate(-58deg);
-    position:absolute;
-    left: -26px;
-    top: 1px;
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 14px;
+  border-left: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  transform: rotate(-58deg);
+  position: absolute;
+  left: -26px;
+  top: 1px;
 }
 
-.checkbox-wrapper label, .radio-wrapper label  {
-    position: relative;
-    left: 10px;
-    margin: 10px;
-    line-height: 1.6;
+.checkbox-wrapper label,
+.radio-wrapper label {
+  position: relative;
+  left: 10px;
+  margin: 10px;
+  line-height: 1.6;
 }
 
 .radio-wrapper label::before {
@@ -240,23 +251,27 @@ section {
   content: "";
   width: 20px;
   height: 20px;
-  position:absolute;
+  position: absolute;
   left: -29px;
   top: -3px;
   border-radius: 50%;
-  background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
+  background-image: radial-gradient(
+    circle,
+    var(--tertiary-color),
+    var(--secondary-color)
+  );
 }
 
 /*Hide checked state */
-.checkbox-wrapper input[type="checkbox"] + label::after, 
+.checkbox-wrapper input[type="checkbox"] + label::after,
 .radio-wrapper input[type="radio"] + label::after {
-    content: none;
+  content: none;
 }
 
 /* show the checked state*/
-.checkbox-wrapper input[type="checkbox"]:checked + label::after, 
+.checkbox-wrapper input[type="checkbox"]:checked + label::after,
 .radio-wrapper input[type="radio"]:checked + label::after {
-    content: "";
+  content: "";
 }
 /* HERO STYLES END */
 
@@ -293,7 +308,7 @@ section {
 /* WHAT YOU DO STYLES END */
 
 /* WHAT YOU DO STYLES START */
-.steps { 
+.steps {
   background: var(--primary-color);
 }
 
@@ -332,6 +347,10 @@ section {
 }
 
 .step-img img {
+  max-width: 100%;
+}
+
+.step-img i {
   max-width: 100%;
 }
 
@@ -409,7 +428,7 @@ section {
 
 .contact-info > * {
   flex: 1;
-  margin: 15px
+  margin: 15px;
 }
 
 .contact-info iframe {
@@ -425,7 +444,8 @@ section {
   font-size: 32px;
 }
 
-.contact-info p, .contact-info address {
+.contact-info p,
+.contact-info address {
   margin: 20px 0;
   line-height: 1.5;
   font-size: 16px;
@@ -440,7 +460,8 @@ section {
   opacity: 0;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   border: 1px solid var(--secondary-color);
   display: block;
   padding: 7px 15px;
@@ -448,17 +469,18 @@ section {
   color: var(--secondary-color);
   width: 100%;
   margin-bottom: 15px;
-  margin-top: 5px; 
+  margin-top: 5px;
   border-radius: 10px;
-  background-color: rgba(255,255,255, 0.75);
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .contact-form textarea {
   resize: none;
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
-  background-color: rgba(255,255,255, 1);
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: rgba(255, 255, 255, 1);
   outline: none;
 }
 
@@ -525,7 +547,8 @@ section {
     font-size: 20px;
   }
 
-  .hero-cta, .hero-form {
+  .hero-cta,
+  .hero-form {
     width: 100%;
   }
 
@@ -537,15 +560,15 @@ section {
     flex: 0 70%;
   }
 
-  .contact-info iframe{
+  .contact-info iframe {
     flex: 1 100%;
   }
 
-  footer h2, footer div {
+  footer h2,
+  footer div {
     text-align: center;
     width: 100%;
   }
-
 }
 
 /* 2.4 - MEDIA QUERIES FOR TABLETS DOWN TO PHONES */
@@ -554,17 +577,18 @@ section {
     padding: 30px 15px;
   }
 
-  .checkbox label, .radio label {
+  .checkbox label,
+  .radio label {
     margin: 24px;
   }
-  
+
   .section-title {
     width: 100%;
   }
 
   .step h3 {
     flex: 1 100%;
-    text-align: center
+    text-align: center;
   }
 
   .step-info {
@@ -581,17 +605,17 @@ section {
   }
 
   .step-text {
-    flex: 100%;  
+    flex: 100%;
   }
 
-  .trainer-bio h3, .trainer-bio h4 {
+  .trainer-bio h3,
+  .trainer-bio h4 {
     display: block;
   }
 }
 
 /* 2.4 - MEDIA QUERIES FOR PHONE */
 @media screen and (max-width: 575px) {
-  
   .hero-form button {
     width: 100%;
   }
